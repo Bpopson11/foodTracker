@@ -4,11 +4,13 @@
   [meal]="currentMeal">
 </meal-display>
 
+
 <show-meal-details *ngIf="selectedMeal" [meal]="selectedMeal">
-</show-meal-details>
+</show-meal-details><!--  why can't there be both the show meal details AND the edit meal details? Is it because they both have the same structure?-->
 
 <new-meal (onAddNewMeal)="createMeal($event)"></new-meal>
 
+<edit-meal-details *ngIf="selectedMeal" [meal]="selectedMeal"></edit-meal-details>
 
 
 
