@@ -5,23 +5,25 @@ import { Meal } from './meal.model';
   selector: 'new-meal',
   outputs: ['onAddNewMeal'],
   template: `
-    <div class="meal-form">
-      <h3>Add new meal:</h3>
+  <div class="meal-form">
+    <h3>Add new meal:</h3>
 
-      <input placeholder="Meal Name" #newMealName class="form-control"><br>
-      <input placeholder="Details" #newMealDetails class="form-control"><br>
-      <input placeholder="Calories" #newCalorieCount class="form-control"><br>
+    <input placeholder="Meal Name" #newMealName class="form-control"><br>
+    <input placeholder="Details" #newMealDetails class="form-control"><br>
+    <input placeholder="Calories" #newCalorieCount class="form-control"><br>
 
-      <h3>Select Meal Time</h3>
-      <select class="mealTimeDropdown form-control" #newMealTime>
-      <option value="Breakfast">Breakfast</option>
-      <option value="Lunch">Lunch</option>
-      <option value="Dinner">Dinner</option>
-      <option value="Snack">Snack</option>
-      <option value="Drink">Drink</option>
-      </select>
+    <h3>Select Meal Time</h3>
+    <select class="mealTimeDropdown form-control" #newMealTime>
+    <option value="Breakfast">Breakfast</option>
+    <option value="Lunch">Lunch</option>
+    <option value="Dinner">Dinner</option>
+    <option value="Snack">Snack</option>
+    <option value="Drink">Drink</option>
+    </select>
 
-      <button (click)="addMeal(newMealName, newMealDetails, newCalorieCount, newMealTime)" class="btn-info btn add-button">Add</button>
+    <button (click)="addMeal(newMealName, newMealDetails, newCalorieCount, newMealTime)" class="btn-info btn add-button">Add</button>
+    </div>
+
     `
 })
 

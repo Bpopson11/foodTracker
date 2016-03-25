@@ -17,7 +17,7 @@ import {Meal} from './meal.model';
     <option value="Snack">Snack</option>
     <option value="Drink">Drink</option>
     </select>
-    <div>
+  <div>
   `
 })
 export class EditMealDetailsComponent {
