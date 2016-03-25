@@ -10,7 +10,7 @@ import { Meal } from './meal.model';
   inputs: ['mealList'],
   outputs: ['onMealSelect'],
   directives: [MealComponent, NewMealComponent, EditMealDetailsComponent, ShowMealDetailsComponent],
-  templateUrl: 'app/meal-list.view.html'
+  templateUrl: 'app/html-view.html'
 })
 
 export class MealListComponent {

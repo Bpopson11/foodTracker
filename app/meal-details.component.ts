@@ -4,16 +4,7 @@ import { Meal } from './meal.model';
 @Component({
   selector: 'show-meal-details',
   inputs: ['meal'],
-  template: `
-  <div class="row">
-    <div class="col col-md-6">
-    <div class="mealDetails">
-      <h3>{{ meal.mealName }}: </h3>
-        <p> Details: {{ meal.mealDetails }}</p>
-        <p> Calories: {{ meal.calorieCount }}</p>
-        <p> Meal Type: {{ meal.mealTime }}</p>
-    </div>
-  `
+  templateUrl: 'app/html-view.html'
 })
 
 export class ShowMealDetailsComponent {
