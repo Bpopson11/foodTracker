@@ -10,7 +10,7 @@ import {Meal} from './meal.model';
     <input [(ngModel)]="meal.mealDetails">
     <input [(ngModel)]="meal.calorieCount">
     <h3>Select Meal Time</h3>
-    <select class="mealTimeDropdown form-control">
+    <select class="mealTimeDropdown form-control" [(ngModel)]="meal.mealTime">
     <option value="Breakfast">Breakfast</option>
     <option value="Lunch">Lunch</option>
     <option value="Dinner">Dinner</option>
