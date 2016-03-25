@@ -4,14 +4,7 @@
   [meal]="currentMeal">
 </meal-display>
 
-<div class="mealProgress">
-  <h3>{{ meal.mealName }}: </h3>
-    <p> Details: {{ meal.mealDetails }}</p>
-    <p> Calories: {{ meal.calorieCount }}</p>
-    <p> Meal Type: {{ meal.mealType }}</p>
 
-  </div>
-</div>
 
 <new-meal (onAddNewMeal)="createMeal($event)"></new-meal>
 

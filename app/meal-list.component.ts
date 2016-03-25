@@ -1,13 +1,14 @@
 import { Component, EventEmitter } from 'angular2/core';
 import { MealComponent } from './meal.component';
 import { NewMealComponent } from './new-meal.component';
+import { ShowMealDetailsComponent } from './meal-details.component';
 import { Meal } from './meal.model';
 
 @Component({
   selector: 'meal-list',
   inputs: ['mealList'],
   outputs: ['onMealSelect'],
-  directives: [MealComponent, NewMealComponent],
+  directives: [MealComponent, NewMealComponent, ShowMealDetailsComponent],
   templateUrl: 'app/meal-list.view.html'
 })
 
@@ -26,5 +27,5 @@ export class MealListComponent {
   createMeal(newMeal: Meal): void {
   console.log(newMeal);
   this.mealList.push(newMeal);//SEE * BELOW
-}
+  }
 }

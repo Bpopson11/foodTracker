@@ -1,11 +1,17 @@
 import { Component } from 'angular2/core';
-import { MealListComponent } from './meal-list.component';
 import { Meal } from './meal.model';
 
 @Component({
   selector: 'show-meal-details',
   inputs: ['meal'],
-  templateUrl: 'app/meal-list.view.html'
+  template: `
+    <div class="mealDetails">
+      <h3>{{ meal.mealName }}: </h3>
+        <p> Details: {{ meal.mealDetails }}</p>
+        <p> Calories: {{ meal.calorieCount }}</p>
+        <p> Meal Type: {{ meal.mealType }}</p>
+    </div>
+  `
 })
 
 export class ShowMealDetailsComponent {

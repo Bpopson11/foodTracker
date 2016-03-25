@@ -4,6 +4,7 @@ import { Meal } from './meal.model';
 
 @Component({
   selector: 'my-app',
+  directives: [MealListComponent],
   template: `
   <div class="container">
     <div class="jumbotron">
@@ -18,6 +19,7 @@ import { Meal } from './meal.model';
 
 export class AppComponent {
   public meals: Meal[];
+  public meal: Meal;
   constructor(){
     this.meals = [
       new Meal("Greek Yogurt", "No sugar added plain", 150, "Breakfast"),
