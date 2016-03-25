@@ -1,6 +1,14 @@
+<h3>Filter Healthy Foods:</h3>
+    <select (change)="onChange($event.target.value)" class="filter form-control">
+      <option value="all">Show All Meals Eaten</option>
+      <option value="healthy">Healthy (< 301 cal)</option>
+      <option value="notHealthy">Unhealthy (> 300 cal)</option>
+    </select><br><br>
+
+
 <div class="row">
   <div class="col col-md-6">
-    <meal-display *ngFor="#currentMeal of mealList"
+    <meal-display *ngFor="#currentMeal of mealList | healthy: filterHealthyMeals"
       (click)="mealClicked(currentMeal)"
       [class.selected]="currentMeal === selectedMeal"
       [meal]="currentMeal">

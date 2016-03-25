@@ -11,11 +11,11 @@ export class HealthyPipe implements PipeTransform {
     var mealCalories = args[0];
     if(mealCalories === "healthy") {
       return input.filter((meal) => {
-        return meal.empty;
+        return meal.calorieCount <= 300;
       });
     } else if (mealCalories === "notHealthy") {
       return input.filter((meal) => {
-        return !meal.empty;
+        return meal.calorieCount > 300;
       });
     } else {
       return input;
