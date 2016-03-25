@@ -6,10 +6,8 @@ import { Meal } from './meal.model';
   inputs: ['meal'],
   template: `
   <div>
-    <label>{{ meal.mealName }}'s</label>
-    <label>{{ meal.mealDetails }}</label>
-    <label>{{ meal.calorieCount }}</label>
-    <label>{{ meal.mealTime }}</label>
+    <label>{{ meal.mealName }}</label>
+
   </div>
   `
 })
@@ -17,3 +15,9 @@ import { Meal } from './meal.model';
 export class MealComponent {
   public meal: Meal;
 }
+
+// <label>{{ meal.mealDetails }}</label>
+// <label>{{ meal.calorieCount }}</label>
+// <label>{{ meal.mealTime }}</label>
+
+///need to check and make sure I only want the mealName for this component.

@@ -25,4 +25,7 @@ export class AppComponent {
       new Meal("Red wine", "1 glass", 122, "Drink")
     ];
   }
+  mealWasSelected(clickedMeal: Meal): void {
+  console.log(clickedMeal);
+  }
 }
