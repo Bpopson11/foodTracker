@@ -22,10 +22,11 @@ export class MealListComponent {
   }
   mealClicked(clickedMeal: Meal): void {
     console.log('child', clickedMeal);
+    this.selectedMeal = clickedMeal;
     this.onMealSelect.emit(clickedMeal);
   }
   createMeal(newMeal: Meal): void {
-  console.log(newMeal);
-  this.mealList.push(newMeal);//SEE * BELOW
+    console.log(newMeal);
+    this.mealList.push(newMeal);//SEE * BELOW
   }
 }

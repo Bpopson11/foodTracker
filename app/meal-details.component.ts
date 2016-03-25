@@ -9,7 +9,7 @@ import { Meal } from './meal.model';
       <h3>{{ meal.mealName }}: </h3>
         <p> Details: {{ meal.mealDetails }}</p>
         <p> Calories: {{ meal.calorieCount }}</p>
-        <p> Meal Type: {{ meal.mealType }}</p>
+        <p> Meal Type: {{ meal.mealTime }}</p>
     </div>
   `
 })

@@ -4,9 +4,11 @@
   [meal]="currentMeal">
 </meal-display>
 
-
+<show-meal-details *ngIf="selectedMeal" [meal]="selectedMeal">
+</show-meal-details>
 
 <new-meal (onAddNewMeal)="createMeal($event)"></new-meal>
+
 
 
 

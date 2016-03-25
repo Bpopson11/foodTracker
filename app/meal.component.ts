@@ -13,10 +13,5 @@ import { Meal } from './meal.model';
 
 export class MealComponent {
   public meal: Meal;
+
 }
-
-// <label>{{ meal.mealDetails }}</label>
-// <label>{{ meal.calorieCount }}</label>
-// <label>{{ meal.mealTime }}</label>
-
-///need to check and make sure I only want the mealName for this component.
