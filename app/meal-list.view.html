@@ -4,4 +4,21 @@
   [meal]="currentMeal">
 </meal-display>
 
+<div class="mealProgress">
+  <h3>{{ meal.mealName }}: </h3>
+    <p> Details: {{ meal.mealDetails }}</p>
+    <p> Calories: {{ meal.calorieCount }}</p>
+    <p> Meal Type: {{ meal.mealType }}</p>
+
+  </div>
+</div>
+
 <new-meal (onAddNewMeal)="createMeal($event)"></new-meal>
+
+
+
+
+<!-- <div class="progress">
+<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="2000" style="width: ">
+May include progress bar of daily calorie intake (or user set) but will return to later
+</div> -->
