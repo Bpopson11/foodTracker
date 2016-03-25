@@ -1,12 +1,18 @@
 import { Component } from 'angular2/core';
+import { MealListComponent } from './meal-list.component';
 import { Meal } from './meal.model';
 
 @Component({
   selector: 'my-app',
   template: `
+  <div class="container">
     <div class="jumbotron">
       <h1>Meal Tracker</h1>
     </div>
+    <meal-list [mealList]="meals"
+    (onMealSelect)="mealWasSelected($event)">
+    </meal-list>
+  </div>
   `
 })
 
