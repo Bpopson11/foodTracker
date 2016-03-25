@@ -18,4 +18,8 @@ export class MealListComponent {
   constructor(){
     this.onMealSelect = new EventEmitter();
   }
+  mealClicked(clickedMeal: Meal): void {
+    console.log('child', clickedMeal);
+    this.onMealSelect.emit(clickedMeal);
+  }
 }
