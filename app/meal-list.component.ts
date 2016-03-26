@@ -7,8 +7,6 @@ import { EditMealDetailsComponent } from './edit-meal.component';
 import { HealthyPipe } from './healthy.pipe';
 import { TimePipe } from './time.pipe';
 
-
-
 @Component({
   selector: 'meal-list',
   inputs: ['mealList'],
@@ -23,8 +21,8 @@ export class MealListComponent {
   public onMealSelect: EventEmitter<Meal>;
   public selectedMeal: Meal;
   public meal: Meal;
-  public filterHealthyMeals: string = "all"
-  public filterMealTimes: string = "all"
+  public filterHealthyMeals: string = "all";
+  public filterMealTimes: string = "all";
   constructor(){
     this.onMealSelect = new EventEmitter();
   }
@@ -35,9 +33,10 @@ export class MealListComponent {
   }
   createMeal(newMeal: Meal): void {
     console.log(newMeal);
-    this.mealList.push(newMeal);//SEE * BELOW
+    this.mealList.push(newMeal);
   }
   onChange(filterOption){
   this.filterHealthyMeals = filterOption;
+  this.filterMealTimes = filterOption;
   }
 }

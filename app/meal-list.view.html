@@ -3,7 +3,7 @@
     <div class="col col-xs-6">
     <h3>Filter Healthy Foods:</h3>
       <select (change)="onChange($event.target.value)" class="filter form-control">
-      <option value="all">Show All Meals Eaten</option>
+      <option value="all">Show All Meals</option>
       <option value="healthy">Healthy (< 301 cal)</option>
       <option value="notHealthy">Unhealthy (> 300 cal)</option>
       </select>
@@ -20,7 +20,7 @@
       </select>
     </div>
     <div class="meal-list">
-      <meal-display *ngFor="#currentMeal of mealList | healthy: filterHealthyMeals"
+      <meal-display *ngFor="#currentMeal of mealList | healthy: filterHealthyMeals | time: filterMealTimes"
       (click)="mealClicked(currentMeal)"
       [class.selected]="currentMeal === selectedMeal"
       [meal]="currentMeal">
