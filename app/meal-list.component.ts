@@ -5,13 +5,15 @@ import { NewMealComponent } from './new-meal.component';
 import { ShowMealDetailsComponent } from './meal-details.component';
 import { EditMealDetailsComponent } from './edit-meal.component';
 import { HealthyPipe } from './healthy.pipe';
+import { TimePipe } from './time.pipe';
+
 
 
 @Component({
   selector: 'meal-list',
   inputs: ['mealList'],
   outputs: ['onMealSelect'],
-  pipes: [HealthyPipe],
+  pipes: [HealthyPipe, TimePipe],
   directives: [MealComponent, NewMealComponent, EditMealDetailsComponent, ShowMealDetailsComponent],
   templateUrl: 'app/meal-list.view.html'
 })
@@ -22,6 +24,7 @@ export class MealListComponent {
   public selectedMeal: Meal;
   public meal: Meal;
   public filterHealthyMeals: string = "all"
+  public filterMealTimes: string = "all"
   constructor(){
     this.onMealSelect = new EventEmitter();
   }

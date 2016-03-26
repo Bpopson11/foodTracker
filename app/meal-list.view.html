@@ -1,18 +1,31 @@
 <div class="row">
   <div class="col col-md-6">
-
+    <div class="col col-xs-6">
     <h3>Filter Healthy Foods:</h3>
       <select (change)="onChange($event.target.value)" class="filter form-control">
-        <option value="all">Show All Meals Eaten</option>
-        <option value="healthy">Healthy (< 301 cal)</option>
-        <option value="notHealthy">Unhealthy (> 300 cal)</option>
-      </select><br><br>
-    <meal-display *ngFor="#currentMeal of mealList | healthy: filterHealthyMeals"
+      <option value="all">Show All Meals Eaten</option>
+      <option value="healthy">Healthy (< 301 cal)</option>
+      <option value="notHealthy">Unhealthy (> 300 cal)</option>
+      </select>
+    </div>
+    <div class="col col-xs-6">
+      <h3>Filter by Meal Time:</h3>
+      <select (change)="onChange($event.target.value)" class="filter form-control">
+      <option value="all">Show All Meals</option>
+      <option value="Breakfast">Breakfast</option>
+      <option value="Lunch">Lunch</option>
+      <option value="Dinner">Dinner</option>
+      <option value="Snack">Snack</option>
+      <option value="Drink">Drink</option>
+      </select>
+    </div>
+    <div class="meal-list">
+      <meal-display *ngFor="#currentMeal of mealList | healthy: filterHealthyMeals"
       (click)="mealClicked(currentMeal)"
       [class.selected]="currentMeal === selectedMeal"
       [meal]="currentMeal">
-    </meal-display>
-
+      </meal-display>
+    </div>
     <new-meal (onAddNewMeal)="createMeal($event)"></new-meal>
   </div>
 
@@ -21,9 +34,6 @@
     </show-meal-details>
 
     <edit-meal-details *ngIf="selectedMeal" [meal]="selectedMeal"></edit-meal-details>
-  </div>
-</div>
-
 
 <!-- <div class="progress">
 <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="2000" style="width: ">
