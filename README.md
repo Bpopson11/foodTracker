@@ -13,7 +13,7 @@ _This app keeps track of meals eaten in a day. In addition, a user may record an
 * _Clone this repo_
 * _The file extensions needed are listed in the JSON files._
 * _Using your shell run the following commands in order:_
-* _1. clone repo
+* 1. clone repo
 2. npm install
 3. bower install
 4. install globals if needed (gulp, bower, sass, typescript, typescript packages.)
@@ -23,7 +23,7 @@ _This app keeps track of meals eaten in a day. In addition, a user may record an
   * npm install typescript -g
   * apm install atom-typescript
 5. gulp build
-6. gulp serve_
+6. gulp serve
 
 
 ## Known Bugs

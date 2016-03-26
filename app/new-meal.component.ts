@@ -23,7 +23,6 @@ import { Meal } from './meal.model';
 
     <button (click)="addMeal(newMealName, newMealDetails, newCalorieCount, newMealTime)" class="btn-info btn add-button">Add</button>
   </div>
-
     `
 })
 
