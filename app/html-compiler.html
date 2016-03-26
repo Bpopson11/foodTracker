@@ -8,25 +8,25 @@
 </div>
 <div class="row">
   <div class="col col-md-6">
-  <div class="mealDetails">
-    <h3>{{ meal.mealName }}: </h3>
-      <p> Details: {{ meal.mealDetails }}</p>
-      <p> Calories: {{ meal.calorieCount }}</p>
-      <p> Meal Type: {{ meal.mealTime }}</p>
-  </div>
-  <div class = "meal-form edit-meal">
-    <input [(ngModel)]="meal.mealName">
-    <input [(ngModel)]="meal.mealDetails">
-    <input [(ngModel)]="meal.calorieCount">
-    <h3>Select Meal Time</h3>
-    <select class="mealTimeDropdown form-control" [(ngModel)]="meal.mealTime">
-    <option value="Breakfast">Breakfast</option>
-    <option value="Lunch">Lunch</option>
-    <option value="Dinner">Dinner</option>
-    <option value="Snack">Snack</option>
-    <option value="Drink">Drink</option>
-    </select>
-  </div>
+    <div class="mealDetails">
+      <h3>{{ meal.mealName }}: </h3>
+        <p> Details: {{ meal.mealDetails }}</p>
+        <p> Calories: {{ meal.calorieCount }}</p>
+        <p> Meal Type: {{ meal.mealTime }}</p>
+    </div>
+    <div class = "meal-form edit-meal">
+      <input [(ngModel)]="meal.mealName">
+      <input [(ngModel)]="meal.mealDetails">
+      <input [(ngModel)]="meal.calorieCount">
+      <h3>Select Meal Time</h3>
+      <select class="mealTimeDropdown form-control" [(ngModel)]="meal.mealTime">
+      <option value="Breakfast">Breakfast</option>
+      <option value="Lunch">Lunch</option>
+      <option value="Dinner">Dinner</option>
+      <option value="Snack">Snack</option>
+      <option value="Drink">Drink</option>
+      </select>
+    </div>
   </div>
   <div class="meal-form">
     <h3>Add new meal:</h3>
