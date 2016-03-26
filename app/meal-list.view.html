@@ -1,29 +1,27 @@
-<h3>Filter Healthy Foods:</h3>
-    <select (change)="onChange($event.target.value)" class="filter form-control">
-      <option value="all">Show All Meals Eaten</option>
-      <option value="healthy">Healthy (< 301 cal)</option>
-      <option value="notHealthy">Unhealthy (> 300 cal)</option>
-    </select><br><br>
-
-
 <div class="row">
   <div class="col col-md-6">
+
+    <h3>Filter Healthy Foods:</h3>
+      <select (change)="onChange($event.target.value)" class="filter form-control">
+        <option value="all">Show All Meals Eaten</option>
+        <option value="healthy">Healthy (< 301 cal)</option>
+        <option value="notHealthy">Unhealthy (> 300 cal)</option>
+      </select><br><br>
     <meal-display *ngFor="#currentMeal of mealList | healthy: filterHealthyMeals"
       (click)="mealClicked(currentMeal)"
       [class.selected]="currentMeal === selectedMeal"
       [meal]="currentMeal">
     </meal-display>
 
+    <new-meal (onAddNewMeal)="createMeal($event)"></new-meal>
 
-<show-meal-details *ngIf="selectedMeal" [meal]="selectedMeal">
-</show-meal-details><!--  why can't there be both the show meal details AND the edit meal details? Is it because they both have the same structure?-->
+  </div>
 
+  <div class="col col-md-6">
+    <show-meal-details *ngIf="selectedMeal" [meal]="selectedMeal">
+    </show-meal-details>
 
-<edit-meal-details *ngIf="selectedMeal" [meal]="selectedMeal"></edit-meal-details>
-
-<new-meal (onAddNewMeal)="createMeal($event)"></new-meal>
-
-
+    <edit-meal-details *ngIf="selectedMeal" [meal]="selectedMeal"></edit-meal-details>
 
 <!-- <div class="progress">
 <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="2000" style="width: ">
